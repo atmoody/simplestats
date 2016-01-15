@@ -4,6 +4,7 @@ from stats import mean
 #will start looking for the mean file in shared folder
 #can also use explicit path
 from nose.tools import assert_equal, assert_almost_equals
+#unittest will also allow you to test for errors
 
 def test_mean():
 	assert_equal(mean([2,4]),3.0) #you know the answer you should get and you're testing the formula that it gives you the correct answer
@@ -16,6 +17,9 @@ def test_empty_list():
 def test_floating_mean():
 	assert_almost_equals(mean([0.5,0.5,1]),0.666666666) #make sure you add enough points after the decimal point
 ##test_floating_mean()
+
+def test_str_list_mean(): #numbers entering function as strings
+	assert_equal(mean(['1','2','3']), 2.0)
 
 ###nosetest will let you check that all your error checking tests work
 #runs functions with test in the name
