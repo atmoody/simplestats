@@ -5,8 +5,11 @@ def mean(vals):
 	length = len(vals)
 	return total/length
 	
-#print(mean([2,4]))
+def test_mean():
+	assert mean([2,4]) == 3.0 #you know the answer you should get and you're testing the formula that it gives you the correct answer
+test_mean()
 
 ##assertions and exceptions make sure you're using the correct file type
 #runs program with non-numbers
-print(mean("hello"))
+#print(mean("hello")) ###throws error above
+
